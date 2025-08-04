@@ -12,7 +12,7 @@ int main() {
 
     const Data *deserializedData = Serializer::deserialize(raw);
     std::cout << "Deserialized data: a = " << deserializedData->a
-              << ", b = " << (deserializedData->b ? *deserializedData->b : 0) << std::endl;
+            << ", b = " << (deserializedData->b ? *deserializedData->b : 0) << std::endl;
     delete deserializedData->b;
     delete deserializedData;
     return 0;

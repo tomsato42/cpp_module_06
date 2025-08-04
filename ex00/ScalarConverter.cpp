@@ -62,8 +62,8 @@ void ScalarConverter::convert(const std::string &input) {
                 charImpossible = true;
             } else {
                 cVal = static_cast<char>(iVal);
-				if (iVal < std::numeric_limits<char>::min() || iVal > std::numeric_limits<char>::max())
-					charImpossible = true;
+                if (iVal < std::numeric_limits<char>::min() || iVal > std::numeric_limits<char>::max())
+                    charImpossible = true;
                 if (!std::isprint(cVal)) charNonDisplayable = true;
             }
             fVal = static_cast<float>(tmp);
@@ -79,13 +79,12 @@ void ScalarConverter::convert(const std::string &input) {
             } else {
                 if (fVal < std::numeric_limits<int>::min() || fVal > std::numeric_limits<int>::max()) {
                     intImpossible = true;
-					charImpossible = true;
-				}
-                else {
+                    charImpossible = true;
+                } else {
                     iVal = static_cast<int>(fVal);
                     cVal = static_cast<char>(iVal);
-					if (iVal < std::numeric_limits<char>::min() || iVal > std::numeric_limits<char>::max())
-						charImpossible = true;
+                    if (iVal < std::numeric_limits<char>::min() || iVal > std::numeric_limits<char>::max())
+                        charImpossible = true;
                     if (!std::isprint(cVal)) charNonDisplayable = true;
                 }
             }
@@ -100,15 +99,14 @@ void ScalarConverter::convert(const std::string &input) {
             if (std::isnan(dVal) || std::isinf(dVal)) {
                 intImpossible = true;
             } else {
-                if (dVal < std::numeric_limits<int>::min() || dVal > std::numeric_limits<int>::max()){
+                if (dVal < std::numeric_limits<int>::min() || dVal > std::numeric_limits<int>::max()) {
                     intImpossible = true;
-					charImpossible = true;
-				}
-                else {
+                    charImpossible = true;
+                } else {
                     iVal = static_cast<int>(dVal);
                     cVal = static_cast<char>(iVal);
-					if (iVal < std::numeric_limits<char>::min() || iVal > std::numeric_limits<char>::max())
-						charImpossible = true;
+                    if (iVal < std::numeric_limits<char>::min() || iVal > std::numeric_limits<char>::max())
+                        charImpossible = true;
                     if (!std::isprint(cVal)) charNonDisplayable = true;
                 }
             }

@@ -5,7 +5,7 @@
 #include <iostream>
 #include <cstdlib>
 
-Base * generate(void) {
+Base *generate(void) {
     const int random = rand() % 3;
     switch (random) {
         case 0:
@@ -21,33 +21,33 @@ Base * generate(void) {
 }
 
 void identify(Base *p) {
-    if (dynamic_cast<A*>(p) != NULL) {
+    if (dynamic_cast<A *>(p) != NULL) {
         std::cout << "\033[31mType of Base: \033[1mA\033[0m" << std::endl;
     }
-    if (dynamic_cast<B*>(p) != NULL) {
+    if (dynamic_cast<B *>(p) != NULL) {
         std::cout << "\033[34mType of Base: \033[1mB\033[0m" << std::endl;
     }
-    if (dynamic_cast<C*>(p) != NULL) {
+    if (dynamic_cast<C *>(p) != NULL) {
         std::cout << "\033[33mType of Base: \033[1mC\033[0m" << std::endl;
     }
 }
 
 void identify(Base &p) {
     try {
-        const A& a = dynamic_cast<A&>(p);
-        (void)a;
+        const A &a = dynamic_cast<A &>(p);
+        (void) a;
         std::cout << "\033[31mType of Base: \033[1mA\033[0m" << std::endl;
     } catch (...) {
     }
     try {
-        const B& b = dynamic_cast<B&>(p);
-        (void)b;
+        const B &b = dynamic_cast<B &>(p);
+        (void) b;
         std::cout << "\033[34mType of Base: \033[1mB\033[0m" << std::endl;
     } catch (...) {
     }
     try {
-        const C& c = dynamic_cast<C&>(p);
-        (void)c;
+        const C &c = dynamic_cast<C &>(p);
+        (void) c;
         std::cout << "\033[33mType of Base: \033[1mC\033[0m" << std::endl;
     } catch (...) {
     }

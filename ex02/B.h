@@ -2,7 +2,7 @@
 #define B_H
 #include "Base.h"
 
-class B : public Base{
+class B : public Base {
 };
 
 #endif // B_H
