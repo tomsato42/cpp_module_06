@@ -6,11 +6,7 @@ struct Data {
     int *b;
 };
 
-#if defined(__x86_64__) || defined(_M_X64)
-typedef unsigned long long uintptr_t;
-#else
 typedef unsigned long uintptr_t;
-#endif
 
 class Serializer {
 public:

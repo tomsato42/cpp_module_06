@@ -9,6 +9,7 @@ int main() {
 
     uintptr_t raw = Serializer::serialize(&data);
     std::cout << "Serialized data to raw pointer: " << raw << std::endl;
+    std::cout << "raw size: " << sizeof(raw) << " bytes" << std::endl;
 
     const Data *deserializedData = Serializer::deserialize(raw);
     std::cout << "Deserialized data: a = " << deserializedData->a
